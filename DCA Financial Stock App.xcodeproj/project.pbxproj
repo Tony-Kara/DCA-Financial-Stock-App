@@ -3,13 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04C8954026C8753200D6452F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8953F26C8753200D6452F /* AppDelegate.swift */; };
 		04C8954226C8753300D6452F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8954126C8753300D6452F /* SceneDelegate.swift */; };
-		04C8954426C8753300D6452F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8954326C8753300D6452F /* ViewController.swift */; };
+		04C8954426C8753300D6452F /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8954326C8753300D6452F /* SearchTableViewController.swift */; };
 		04C8954726C8753300D6452F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C8954526C8753300D6452F /* Main.storyboard */; };
 		04C8954926C8754500D6452F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C8954826C8754500D6452F /* Assets.xcassets */; };
 		04C8954C26C8754500D6452F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C8954A26C8754500D6452F /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		04C8953C26C8753200D6452F /* DCA Financial Stock App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DCA Financial Stock App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C8953F26C8753200D6452F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C8954126C8753300D6452F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04C8954326C8753300D6452F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04C8954326C8753300D6452F /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		04C8954626C8753300D6452F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04C8954826C8754500D6452F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04C8954B26C8754500D6452F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			children = (
 				04C8953F26C8753200D6452F /* AppDelegate.swift */,
 				04C8954126C8753300D6452F /* SceneDelegate.swift */,
-				04C8954326C8753300D6452F /* ViewController.swift */,
+				04C8954326C8753300D6452F /* SearchTableViewController.swift */,
 				04C8954526C8753300D6452F /* Main.storyboard */,
 				04C8954826C8754500D6452F /* Assets.xcassets */,
 				04C8954A26C8754500D6452F /* LaunchScreen.storyboard */,
@@ -80,7 +80,6 @@
 				EA0BE714B2D6BDE670E19138 /* Pods-DCA Financial Stock App.debug.xcconfig */,
 				25CE2F60AAB701B45D8BD771 /* Pods-DCA Financial Stock App.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -206,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04C8954426C8753300D6452F /* ViewController.swift in Sources */,
+				04C8954426C8753300D6452F /* SearchTableViewController.swift in Sources */,
 				04C8954026C8753200D6452F /* AppDelegate.swift in Sources */,
 				04C8954226C8753300D6452F /* SceneDelegate.swift in Sources */,
 			);
