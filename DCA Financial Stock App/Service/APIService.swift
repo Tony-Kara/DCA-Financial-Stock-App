@@ -21,10 +21,12 @@ struct APIService {
         
         let urlString = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=\(keywords)&apikey=\(apiKey)"
     
-        let url = URL(string: urlString)
+        let url = URL(string: urlString)!
         return URLSession.shared.dataTaskPublisher(for: url)
             .map({$0.data})
-            .
+            .decode(type: SearchResults.self, decoder: JSONDecoder())
+            .receive(on: RunLoop.main)
+            .eraseToAnyPublisher()
         
     }
     
