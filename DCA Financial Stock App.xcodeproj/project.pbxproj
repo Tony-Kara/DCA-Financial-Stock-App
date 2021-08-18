@@ -14,6 +14,7 @@
 		04C8954926C8754500D6452F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04C8954826C8754500D6452F /* Assets.xcassets */; };
 		04C8954C26C8754500D6452F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04C8954A26C8754500D6452F /* LaunchScreen.storyboard */; };
 		04C8955526C9415500D6452F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8955426C9415500D6452F /* SearchTableViewCell.swift */; };
+		04C8955926CD43C100D6452F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8955826CD43C000D6452F /* APIService.swift */; };
 		893628F9D2967A0D5072E9ED /* Pods_DCA_Financial_Stock_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B47B1F5DFE1C46C80C2324F /* Pods_DCA_Financial_Stock_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		04C8954B26C8754500D6452F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04C8954D26C8754500D6452F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C8955426C9415500D6452F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		04C8955826CD43C000D6452F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		25CE2F60AAB701B45D8BD771 /* Pods-DCA Financial Stock App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCA Financial Stock App.release.xcconfig"; path = "Target Support Files/Pods-DCA Financial Stock App/Pods-DCA Financial Stock App.release.xcconfig"; sourceTree = "<group>"; };
 		4B47B1F5DFE1C46C80C2324F /* Pods_DCA_Financial_Stock_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DCA_Financial_Stock_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0BE714B2D6BDE670E19138 /* Pods-DCA Financial Stock App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCA Financial Stock App.debug.xcconfig"; path = "Target Support Files/Pods-DCA Financial Stock App/Pods-DCA Financial Stock App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		04C8953E26C8753200D6452F /* DCA Financial Stock App */ = {
 			isa = PBXGroup;
 			children = (
+				04C8955726CD437E00D6452F /* Service */,
 				04C8953F26C8753200D6452F /* AppDelegate.swift */,
 				04C8954126C8753300D6452F /* SceneDelegate.swift */,
 				04C8955626C9417200D6452F /* View */,
@@ -91,6 +94,14 @@
 				04C8955426C9415500D6452F /* SearchTableViewCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		04C8955726CD437E00D6452F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04C8955826CD43C000D6452F /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		13C634CE5799D99623A708F6 /* Pods */ = {
@@ -225,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C8954426C8753300D6452F /* SearchTableViewController.swift in Sources */,
+				04C8955926CD43C100D6452F /* APIService.swift in Sources */,
 				04C8955526C9415500D6452F /* SearchTableViewCell.swift in Sources */,
 				04C8954026C8753200D6452F /* AppDelegate.swift in Sources */,
 				04C8954226C8753300D6452F /* SceneDelegate.swift in Sources */,
