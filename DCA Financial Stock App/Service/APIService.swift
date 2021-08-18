@@ -6,12 +6,36 @@
 //
 
 import Foundation
+import Combine
+
 
 struct APIService {
     
-    let apiKey = "L8CM1FUW5IR2862H"
-    let apiKey2 = "OX6AHYBLLGOACLSH"
-    let apiKey3 = "AUK1ANQD0HM9R6SQ"
+    var apiKey: String {
+        return keys.randomElement() ?? ""
+    }
+    
+    let keys = ["L8CM1FUW5IR2862H" , "OX6AHYBLLGOACLSH" , "AUK1ANQD0HM9R6SQ"]
+    
+    func fetchSymbolsPublisher(keywords: String) -> AnyPublisher<SearchResults, Error> {
+        
+        let urlString = "https://www.alphavantage.co/query?function=SYMBOL_SEARCH&keywords=\(keywords)&apikey=\(apiKey)"
+    
+        let url = URL(string: urlString)
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map({$0.data})
+            .
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
 }
