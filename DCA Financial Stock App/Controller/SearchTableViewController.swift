@@ -22,28 +22,43 @@ class SearchTableViewController: UITableViewController {
     
     private let apiService = APIService()
     private var subscribers = Set<AnyCancellable>()
+    @Published private var searchQuery = String() // This is an observable, adding the "@Published" allows us to observe the searchQuerry variable (the searchBar) each time the value stored in it changes.
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpNavigationBar()
-        performSearch()
+      //  performSearch()
+        observeForm()
     }
 
     func setUpNavigationBar(){
         navigationItem.searchController = searchController
     }
     
+    func observeForm() { // this function runs the API and the keyword is added here(the search bar text)
+        $searchQuery //observer
+    //use this to delay calling the api for few seconds, the "RunLoop.main" will bring it to the main thread
+            .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
+            .sink { [unowned self] (searchQuery) in
+                
+                self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
+                            switch completion{  // errors from the API call is handled here
+                            case .failure(let error) :
+                                print(error.localizedDescription)
+                            case .finished: break
+                            }
+                        } receiveValue: { (searchResults) in   // if API call is successful, it is handled here
+                           print(searchResults)
+                        }.store(in: &self.subscribers) // add subscriber
+     
+            }.store(in: &subscribers) // subscriber
+    }
+    
+    
+    
     func  performSearch() {
-        apiService.fetchSymbolsPublisher(keywords: "S&P500").sink { (completion) in
-            switch completion{  // errors from the API call is handled here
-            case .failure(let error) :
-                print(error.localizedDescription)
-            case .finished: break
-            }
-        } receiveValue: { (searchResults) in   // if API call is successful, it is handled here
-            print(searchResults)
-        }.store(in: &subscribers) // add subscriber
+
 
     }
     
@@ -62,9 +77,10 @@ class SearchTableViewController: UITableViewController {
 
 extension SearchTableViewController : UISearchResultsUpdating, UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
-        guard let searchQuery = searchController.searchBar.text , !searchQuery.isEmpty else {return}
+        guard let searchQuery = searchController.searchBar.text ,
+              !searchQuery.isEmpty else {return}
+        self.searchQuery = searchQuery // store the value from the local searchQuery into the global                                         //   self.searchQuery above
         
-        print(searchQuery)
         
     }
     
