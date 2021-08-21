@@ -30,7 +30,7 @@ class SearchTableViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpNavigationBar()
-        //  performSearch()
+      
         observeForm()
     }
     
@@ -51,29 +51,29 @@ class SearchTableViewController: UITableViewController {
                     case .finished: break
                     }
                 } receiveValue: { (result) in   // if API call is successful, it is handled here
-                    self.searchResults = result
-                    
+                    self.searchResults = result // this is from the struct at the higher hierachy, SearchResults //and not SearchResult
+                    self.tableView.reloadData()
                 }.store(in: &self.subscribers) // add subscriber
                 
             }.store(in: &subscribers) // subscriber
     }
     
     
-    
-    func  performSearch() {
-        
-        
-    }
+ 
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return searchResults?.items.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! SearchTableViewCell
         
-        cell.configure(with: <#T##SearchResult#>)
+        if let searchResults = self.searchResults {
+            let searchResult = searchResults.items[indexPath.row]
+            cell.configure(with: searchResult)
+        }
+       
         return cell
     }
     
