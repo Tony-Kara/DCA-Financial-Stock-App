@@ -62,6 +62,9 @@ class SearchTableViewController: UITableViewController {
 
 extension SearchTableViewController : UISearchResultsUpdating, UISearchControllerDelegate {
     func updateSearchResults(for searchController: UISearchController) {
+        guard let searchQuery = searchController.searchBar.text , !searchQuery.isEmpty else {return}
+        
+        print(searchQuery)
         
     }
     
