@@ -10,6 +10,11 @@ import Combine
 
 class SearchTableViewController: UITableViewController {
     
+    private enum Mode {
+        case onboarding
+        case search
+    }
+    
     private lazy  var searchController : UISearchController = {
         let sc = UISearchController(searchResultsController: nil)
         sc.searchResultsUpdater = self
@@ -22,6 +27,8 @@ class SearchTableViewController: UITableViewController {
     
     private let apiService = APIService()
     private var subscribers = Set<AnyCancellable>()
+    // we want to listen to the mode to dertermine if it is in search mode or onboarding
+    @Published private var mode: Mode = .onboarding
     private var searchResults: SearchResults?
     @Published private var searchQuery = String() // This is an observable, adding the "@Published" allows us to observe the searchQuerry variable (the searchBar) each time the value stored in it changes.
     
@@ -30,12 +37,18 @@ class SearchTableViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpNavigationBar()
-      
+        setupTableView()
         observeForm()
     }
     
     func setUpNavigationBar(){
         navigationItem.searchController = searchController
+    }
+    
+    
+    func setupTableView() {
+        
+        tableView.tableFooterView = UIView() // this will take off the horizontal lines inside the tableview
     }
     
     func observeForm() { // this function runs the API and the keyword is added here(the search bar text), this // means "searchQuery" is the keyword, the required company name eg tesla
@@ -54,8 +67,20 @@ class SearchTableViewController: UITableViewController {
                     self.searchResults = result // this is from the struct at the higher hierachy, SearchResults //and not SearchResult
                     self.tableView.reloadData()
                 }.store(in: &self.subscribers) // add subscriber
-                
-            }.store(in: &subscribers) // subscriber
+             }.store(in: &subscribers) // subscriber
+        
+        $mode.sink { (mode) in
+            
+            switch mode {
+            case  .onboarding:
+            let redView = UIView()
+            redView.backgroundColor = .red
+            self.tableView.backgroundView = redView
+            case .search:
+                self.tableView.backgroundView = nil
+            }
+        }.store(in: &subscribers)
+        
     }
     
     
@@ -89,5 +114,9 @@ extension SearchTableViewController : UISearchResultsUpdating, UISearchControlle
         
     }
     
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        mode = .search
+    }
     
 }
