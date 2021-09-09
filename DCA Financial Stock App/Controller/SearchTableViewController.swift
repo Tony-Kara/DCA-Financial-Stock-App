@@ -7,8 +7,9 @@
 
 import UIKit
 import Combine
+import MBProgressHUD // this library provides loading animation
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UIAnimatable {
 
     private enum Mode {
         case onboarding
@@ -58,7 +59,9 @@ class SearchTableViewController: UITableViewController {
             .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
             .sink { [unowned self] (searchQuery) in
                 
+               showLoadingAnimation()
                 self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
+                  hideLoadingAnimation()
                     switch completion{  // errors from the API call is handled here
                     case .failure(let error) :
                         print(error.localizedDescription)
