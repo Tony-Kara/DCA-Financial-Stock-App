@@ -43,6 +43,7 @@ class SearchTableViewController: UITableViewController {
     
     func setUpNavigationBar(){
         navigationItem.searchController = searchController
+        navigationItem.title = "Search"
     }
     
     
@@ -52,7 +53,7 @@ class SearchTableViewController: UITableViewController {
     }
     
     func observeForm() { // this function runs the API and the keyword is added here(the search bar text), this // means "searchQuery" is the keyword, the required company name eg tesla
-        $searchQuery //observer
+        $searchQuery //searchQuery is observable, so we can use the property with the $ sysmbol
             //use this to delay calling the api for few seconds, the "RunLoop.main" will bring it to the main thread
             .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
             .sink { [unowned self] (searchQuery) in
@@ -73,9 +74,9 @@ class SearchTableViewController: UITableViewController {
             
             switch mode {
             case  .onboarding:
-            let redView = UIView()
-            redView.backgroundColor = .red
-            self.tableView.backgroundView = redView
+//            let redView = UIView()
+//            redView.backgroundColor = nil
+            self.tableView.backgroundView = nil
             case .search:
                 self.tableView.backgroundView = nil
             }
@@ -116,7 +117,7 @@ extension SearchTableViewController : UISearchResultsUpdating, UISearchControlle
     
     
     func willPresentSearchController(_ searchController: UISearchController) {
-        mode = .search
+        mode = .search  // Here, you can run codes of what should happen after the user clicks on the search bar
     }
     
 }
