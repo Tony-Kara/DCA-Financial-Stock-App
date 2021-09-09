@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 class SearchTableViewController: UITableViewController {
-    
+
     private enum Mode {
         case onboarding
         case search
@@ -74,9 +74,7 @@ class SearchTableViewController: UITableViewController {
             
             switch mode {
             case  .onboarding:
-//            let redView = UIView()
-//            redView.backgroundColor = nil
-            self.tableView.backgroundView = nil
+                self.tableView.backgroundView = SearchPlaceHolder()
             case .search:
                 self.tableView.backgroundView = nil
             }

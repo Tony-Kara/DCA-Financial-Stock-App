@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		048B51DD26EA9F4B009709D1 /* SeacrhPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B51DC26EA9F4B009709D1 /* SeacrhPlaceHolder.swift */; };
+		048B51DD26EA9F4B009709D1 /* SearchPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B51DC26EA9F4B009709D1 /* SearchPlaceHolder.swift */; };
 		04C8954026C8753200D6452F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8953F26C8753200D6452F /* AppDelegate.swift */; };
 		04C8954226C8753300D6452F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8954126C8753300D6452F /* SceneDelegate.swift */; };
 		04C8954426C8753300D6452F /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8954326C8753300D6452F /* SearchTableViewController.swift */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		048B51DC26EA9F4B009709D1 /* SeacrhPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeacrhPlaceHolder.swift; sourceTree = "<group>"; };
+		048B51DC26EA9F4B009709D1 /* SearchPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceHolder.swift; sourceTree = "<group>"; };
 		04C8953C26C8753200D6452F /* DCA Financial Stock App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DCA Financial Stock App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04C8953F26C8753200D6452F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04C8954126C8753300D6452F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				04C8955426C9415500D6452F /* SearchTableViewCell.swift */,
-				048B51DC26EA9F4B009709D1 /* SeacrhPlaceHolder.swift */,
+				048B51DC26EA9F4B009709D1 /* SearchPlaceHolder.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C8954426C8753300D6452F /* SearchTableViewController.swift in Sources */,
-				048B51DD26EA9F4B009709D1 /* SeacrhPlaceHolder.swift in Sources */,
+				048B51DD26EA9F4B009709D1 /* SearchPlaceHolder.swift in Sources */,
 				04C8955926CD43C100D6452F /* APIService.swift in Sources */,
 				04C8955526C9415500D6452F /* SearchTableViewCell.swift in Sources */,
 				04C8954026C8753200D6452F /* AppDelegate.swift in Sources */,
