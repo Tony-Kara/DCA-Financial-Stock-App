@@ -105,6 +105,11 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
     }
     
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showCalculator", sender: nil)
+    }
+    
+    
 }
 
 extension SearchTableViewController : UISearchResultsUpdating, UISearchControllerDelegate {
