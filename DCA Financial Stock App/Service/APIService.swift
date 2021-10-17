@@ -38,11 +38,45 @@ struct APIService {
     }
     
     
+    func fetchTimeSeriesMonthlyAdjustedPublisher(keywords: String) -> AnyPublisher<TimeSeriesMonthlyAdjusted, Error>{
+        
+        // i created a reuseable function pasrseQuery(), i will only use it here and not in the fetchSymbolsPublisher function above to ensure i can properly understand what i did later
+        let result = parseQuery(text: keywords)
+        var symbol = String()
+        
+        switch result {
+        case .success(let query):
+            symbol = query
+            
+        case .failure(let error):
+            return Fail(error: error).eraseToAnyPublisher()
+        }
+        
+        
+        
+        let urlString = "https://www.alphavantage.co/query?function=TIME_SERIES_MONTHLY_ADJUSTED&symbol=\(symbol)&apikey=\(apiKey)"
+        
+        guard let url = URL(string: urlString) else {return Fail(error: APIServiceError.badRequest).eraseToAnyPublisher()}
+        
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map({$0.data})
+            .decode(type:TimeSeriesMonthlyAdjusted.self, decoder: JSONDecoder())
+            .receive(on: RunLoop.main)
+            .eraseToAnyPublisher()
+        
+    }
     
     
     
-    
-    
+    private func parseQuery(text: String) -> Result<String, Error> {
+        
+        if let query = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed){
+            return .success(query)
+            
+        }else {
+            return .failure(APIServiceError.encoding)
+        }
+    }
     
     
     
