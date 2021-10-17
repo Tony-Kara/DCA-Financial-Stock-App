@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044D7CC1271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D7CC0271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift */; };
 		048B51DD26EA9F4B009709D1 /* SearchPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B51DC26EA9F4B009709D1 /* SearchPlaceHolder.swift */; };
 		048B51E026EAAE57009709D1 /* UIAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048B51DF26EAAE57009709D1 /* UIAnimatable.swift */; };
 		04C8954026C8753200D6452F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8953F26C8753200D6452F /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044D7CC0271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
 		048B51DC26EA9F4B009709D1 /* SearchPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceHolder.swift; sourceTree = "<group>"; };
 		048B51DF26EAAE57009709D1 /* UIAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimatable.swift; sourceTree = "<group>"; };
 		04C8953C26C8753200D6452F /* DCA Financial Stock App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DCA Financial Stock App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				04C8955B26CD479E00D6452F /* SearchResults.swift */,
+				044D7CC0271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				048B51DD26EA9F4B009709D1 /* SearchPlaceHolder.swift in Sources */,
 				04C8955926CD43C100D6452F /* APIService.swift in Sources */,
 				04C8955526C9415500D6452F /* SearchTableViewCell.swift in Sources */,
+				044D7CC1271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift in Sources */,
 				04C8954026C8753200D6452F /* AppDelegate.swift in Sources */,
 				04C8955C26CD479E00D6452F /* SearchResults.swift in Sources */,
 				04C8954226C8753300D6452F /* SceneDelegate.swift in Sources */,

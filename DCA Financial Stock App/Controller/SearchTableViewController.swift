@@ -58,7 +58,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
             //use this to delay calling the api for few seconds, the "RunLoop.main" will bring it to the main thread
             .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
             .sink { [unowned self] (searchQuery) in
-                
+                guard !searchQuery.isEmpty else {return}
                showLoadingAnimation()
                 self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
                   hideLoadingAnimation()
