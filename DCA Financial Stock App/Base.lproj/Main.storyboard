@@ -401,6 +401,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="kgv-X8-f81"/>
                     <connections>
+                        <outlet property="NameLabel" destination="Kux-Lm-uWA" id="z7D-74-HRg"/>
+                        <outlet property="symbolLabel" destination="PJo-El-d4D" id="Asl-d9-IMR"/>
                         <segue destination="f3d-xB-lD3" kind="show" id="LCJ-Tr-Lt6"/>
                     </connections>
                 </tableViewController>

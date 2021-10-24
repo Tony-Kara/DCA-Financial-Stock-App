@@ -7,6 +7,7 @@
 
 import Foundation
 
+// i created this as a replicate of OHLC struct but with a difference, made it a collection datatype (an array) and also, added a different property which is the adjustedClose, using this as an array allowed me to use a forEach loop, "  sortedTimeSeries.forEach { dateString, ohlc in"  below, and append the model as an array [MonthInfo]
 struct MonthInfo {
     let date: Date
     let adjustedOpen: Double
