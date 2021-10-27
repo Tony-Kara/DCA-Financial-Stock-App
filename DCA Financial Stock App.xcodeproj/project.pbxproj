@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0426CC2127299BBE00143E0B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426CC2027299BBE00143E0B /* String+Extensions.swift */; };
 		044D7CC1271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D7CC0271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift */; };
 		04704F61272576F800A4AC55 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04704F60272576F800A4AC55 /* CalculatorTableViewController.swift */; };
 		04704F6327257D5A00A4AC55 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04704F6227257D5A00A4AC55 /* Asset.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0426CC2027299BBE00143E0B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		044D7CC0271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
 		04704F60272576F800A4AC55 /* CalculatorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewController.swift; sourceTree = "<group>"; };
 		04704F6227257D5A00A4AC55 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -58,6 +60,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0426CC1F27299B8A00143E0B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0426CC2027299BBE00143E0B /* String+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		048B51DE26EAAE2E009709D1 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +97,7 @@
 		04C8953E26C8753200D6452F /* DCA Financial Stock App */ = {
 			isa = PBXGroup;
 			children = (
+				0426CC1F27299B8A00143E0B /* Extension */,
 				048B51DE26EAAE2E009709D1 /* Protocol */,
 				04C8955A26CD478500D6452F /* Model */,
 				04C8955726CD437E00D6452F /* Service */,
@@ -273,6 +284,7 @@
 				048B51E026EAAE57009709D1 /* UIAnimatable.swift in Sources */,
 				048B51DD26EA9F4B009709D1 /* SearchPlaceHolder.swift in Sources */,
 				04704F6327257D5A00A4AC55 /* Asset.swift in Sources */,
+				0426CC2127299BBE00143E0B /* String+Extensions.swift in Sources */,
 				04704F61272576F800A4AC55 /* CalculatorTableViewController.swift in Sources */,
 				04C8955926CD43C100D6452F /* APIService.swift in Sources */,
 				04C8955526C9415500D6452F /* SearchTableViewCell.swift in Sources */,

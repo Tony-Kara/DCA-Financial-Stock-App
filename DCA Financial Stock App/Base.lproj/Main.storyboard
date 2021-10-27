@@ -403,6 +403,11 @@
                     <connections>
                         <outlet property="NameLabel" destination="Kux-Lm-uWA" id="z7D-74-HRg"/>
                         <outlet property="symbolLabel" destination="PJo-El-d4D" id="Asl-d9-IMR"/>
+                        <outletCollection property="currencyLabels" destination="AWF-w5-OrW" collectionClass="NSMutableArray" id="ofN-g5-1ag"/>
+                        <outletCollection property="currencyLabels" destination="Kwt-Dd-rjQ" collectionClass="NSMutableArray" id="4bP-bL-JfF"/>
+                        <outletCollection property="currencyLabels" destination="UAh-dm-xcu" collectionClass="NSMutableArray" id="4ir-nr-Cmw"/>
+                        <outletCollection property="currencyLabels" destination="C9F-vg-5qV" collectionClass="NSMutableArray" id="foO-nm-hYg"/>
+                        <outletCollection property="currencyLabels" destination="iTJ-Cw-uTf" collectionClass="NSMutableArray" id="GHC-ja-G6X"/>
                         <segue destination="f3d-xB-lD3" kind="show" id="LCJ-Tr-Lt6"/>
                     </connections>
                 </tableViewController>
