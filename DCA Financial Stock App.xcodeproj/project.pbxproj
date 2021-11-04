@@ -22,6 +22,7 @@
 		04C8955526C9415500D6452F /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8955426C9415500D6452F /* SearchTableViewCell.swift */; };
 		04C8955926CD43C100D6452F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8955826CD43C000D6452F /* APIService.swift */; };
 		04C8955C26CD479E00D6452F /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8955B26CD479E00D6452F /* SearchResults.swift */; };
+		04F1FC7D27336361009458FA /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1FC7C27336361009458FA /* UITextField+Extensions.swift */; };
 		893628F9D2967A0D5072E9ED /* Pods_DCA_Financial_Stock_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B47B1F5DFE1C46C80C2324F /* Pods_DCA_Financial_Stock_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		04C8955426C9415500D6452F /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		04C8955826CD43C000D6452F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		04C8955B26CD479E00D6452F /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
+		04F1FC7C27336361009458FA /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		25CE2F60AAB701B45D8BD771 /* Pods-DCA Financial Stock App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCA Financial Stock App.release.xcconfig"; path = "Target Support Files/Pods-DCA Financial Stock App/Pods-DCA Financial Stock App.release.xcconfig"; sourceTree = "<group>"; };
 		4B47B1F5DFE1C46C80C2324F /* Pods_DCA_Financial_Stock_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DCA_Financial_Stock_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA0BE714B2D6BDE670E19138 /* Pods-DCA Financial Stock App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DCA Financial Stock App.debug.xcconfig"; path = "Target Support Files/Pods-DCA Financial Stock App/Pods-DCA Financial Stock App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				0426CC2027299BBE00143E0B /* String+Extensions.swift */,
+				04F1FC7C27336361009458FA /* UITextField+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F1FC7D27336361009458FA /* UITextField+Extensions.swift in Sources */,
 				04C8954426C8753300D6452F /* SearchTableViewController.swift in Sources */,
 				048B51E026EAAE57009709D1 /* UIAnimatable.swift in Sources */,
 				048B51DD26EA9F4B009709D1 /* SearchPlaceHolder.swift in Sources */,

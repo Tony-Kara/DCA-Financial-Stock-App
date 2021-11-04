@@ -96,7 +96,7 @@
         <scene sceneID="Jof-fD-zjL">
             <objects>
                 <tableViewController id="I5N-yq-P4Z" customClass="CalculatorTableViewController" customModule="DCA_Financial_Stock_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="s9U-21-kjy">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="s9U-21-kjy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -278,7 +278,7 @@
                                                                         <constraint firstAttribute="height" constant="36" id="qc4-M1-EFc"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="9Mz-Y8-FHc">
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
@@ -314,7 +314,7 @@
                                                                         <constraint firstAttribute="height" constant="36" id="pNh-MU-tmK"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                                                                    <textInputTraits key="textInputTraits"/>
+                                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                 </textField>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WJP-Oj-zPY">
                                                                     <rect key="frame" x="0.0" y="32" width="382" height="14"/>
@@ -344,7 +344,7 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="pis-2n-kII">
                                                             <rect key="frame" x="0.0" y="112" width="382" height="46"/>
                                                             <subviews>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the initial day of investment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aji-JZ-CO0">
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the initial date of investment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aji-JZ-CO0">
                                                                     <rect key="frame" x="0.0" y="0.0" width="382" height="36"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="36" id="Eh4-zH-sQ9"/>
@@ -393,12 +393,15 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="kgv-X8-f81"/>
                     <connections>
                         <outlet property="NameLabel" destination="Kux-Lm-uWA" id="z7D-74-HRg"/>
+                        <outlet property="initialDateOfInvestment" destination="aji-JZ-CO0" id="h7M-S3-Tz2"/>
+                        <outlet property="initialInvestmentAmountTextField" destination="yoP-Ja-UQz" id="GM9-jB-Rea"/>
                         <outlet property="investmentAmountCurrencyLabel" destination="Kwt-Dd-rjQ" id="xfE-YF-aiR"/>
+                        <outlet property="montlyDollarCostAveragingTextField" destination="03Q-m0-EsO" id="YU0-j8-0N0"/>
                         <outlet property="symbolLabel" destination="PJo-El-d4D" id="Asl-d9-IMR"/>
                         <outletCollection property="currencyLabels" destination="AWF-w5-OrW" collectionClass="NSMutableArray" id="ofN-g5-1ag"/>
                         <outletCollection property="currencyLabels" destination="UAh-dm-xcu" collectionClass="NSMutableArray" id="4ir-nr-Cmw"/>
                         <outletCollection property="currencyLabels" destination="C9F-vg-5qV" collectionClass="NSMutableArray" id="foO-nm-hYg"/>
-                        <segue destination="f3d-xB-lD3" kind="show" id="LCJ-Tr-Lt6"/>
+                        <segue destination="f3d-xB-lD3" kind="show" identifier="showDateSelection" id="LCJ-Tr-Lt6"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9dc-gR-yp3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

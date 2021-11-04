@@ -109,8 +109,10 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
         if let searchResults = self.searchResults{
             let searchResult = searchResults.items[indexPath.item]
             let symbol = searchResult.symbol // fetch the symbol at the currrent index path
-            handleSelection(for: symbol, searchResult: searchResult)
+            handleSelection(for: symbol, searchResult: searchResult) // The magic happens here
         }
+        
+        tableView.deselectRow(at: indexPath, animated: true) // deselect and stop highlighting the specific row that user has clicked on
     }
     
     

@@ -9,6 +9,10 @@ import UIKit
 
 class CalculatorTableViewController: UITableViewController {
     
+    @IBOutlet weak var initialInvestmentAmountTextField: UITextField!
+    @IBOutlet weak var montlyDollarCostAveragingTextField: UITextField!
+    
+    @IBOutlet weak var initialDateOfInvestment: UITextField!
     @IBOutlet weak var symbolLabel: UILabel!
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet var currencyLabels: [UILabel]!
@@ -19,6 +23,7 @@ class CalculatorTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        setupTextFields()
     }
     
     
@@ -31,4 +36,31 @@ class CalculatorTableViewController: UITableViewController {
         }
     }
     
+    
+    func  setupTextFields() {
+        
+        initialInvestmentAmountTextField.addDoneButton()
+        montlyDollarCostAveragingTextField.addDoneButton()
+        initialDateOfInvestment.delegate = self
+        
+    }
+    
+    
+    
+}
+
+
+extension CalculatorTableViewController: UITextFieldDelegate {
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        
+        if textField == initialDateOfInvestment {
+            performSegue(withIdentifier: "showDateSelection", sender: asset?.timeSeriesMonthlyAdusted)
+        }
+        
+        
+        return false // this ensures that this textfield is not editable
+        
+        
+    }
 }
