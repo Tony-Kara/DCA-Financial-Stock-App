@@ -7,6 +7,7 @@
 
 import UIKit
 
+//This will be the detail view for each row of stock selected, at this point, i do not need a reusable cell as i will not be using an array to loop through various index of elements and insert them in each roll, here, i can just add label to the cell, add IBOutlets and pass the values from the SearchTableViewController which is the first VC, in here, there is no need to insert any of the tableview methods.
 class CalculatorTableViewController: UITableViewController {
     
     @IBOutlet weak var initialInvestmentAmountTextField: UITextField!
@@ -26,7 +27,7 @@ class CalculatorTableViewController: UITableViewController {
         setupTextFields()
     }
     
-    
+    // here, i filled in the IBOutlets with values passed from the first VC
     func setupViews() {
         symbolLabel.text = asset?.searchResult.symbol
         NameLabel.text = asset?.searchResult.name
@@ -41,11 +42,26 @@ class CalculatorTableViewController: UITableViewController {
         
         initialInvestmentAmountTextField.addDoneButton()
         montlyDollarCostAveragingTextField.addDoneButton()
-        initialDateOfInvestment.delegate = self
+        initialDateOfInvestment.delegate = self // I need access to the UITextFieldDelegate methods and i need to set this textfield as a delegate to report whatever changes happens to it to the class.
         
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { This also works and is code is smaller
+//        if segue.identifier == "showDateSelection",
+//        let dateselectionTableViewController = segue.destination as? DateSelectionTableviewController {
+//            dateselectionTableViewController.timeSeriesMonthlyAdjusted = asset?.timeSeriesMonthlyAdusted
+//        }
+//    }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDateSelection",
+        let dateselectionTableViewController = segue.destination as? DateSelectionTableviewController,
+        let timeSeriesMonthlyAdusted = sender as? TimeSeriesMonthlyAdjusted
+        {
+            dateselectionTableViewController.timeSeriesMonthlyAdjusted = timeSeriesMonthlyAdusted
+        }
+    }
     
 }
 

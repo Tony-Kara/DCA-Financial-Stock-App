@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0426CC2127299BBE00143E0B /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426CC2027299BBE00143E0B /* String+Extensions.swift */; };
+		043F11C2273425BE00647961 /* DateSelectionTableviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043F11C1273425BE00647961 /* DateSelectionTableviewController.swift */; };
 		044D7CC1271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D7CC0271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift */; };
 		04704F61272576F800A4AC55 /* CalculatorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04704F60272576F800A4AC55 /* CalculatorTableViewController.swift */; };
 		04704F6327257D5A00A4AC55 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04704F6227257D5A00A4AC55 /* Asset.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0426CC2027299BBE00143E0B /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		043F11C1273425BE00647961 /* DateSelectionTableviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableviewController.swift; sourceTree = "<group>"; };
 		044D7CC0271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSeriesMonthlyAdjusted.swift; sourceTree = "<group>"; };
 		04704F60272576F800A4AC55 /* CalculatorTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTableViewController.swift; sourceTree = "<group>"; };
 		04704F6227257D5A00A4AC55 /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				04C8954326C8753300D6452F /* SearchTableViewController.swift */,
 				04704F60272576F800A4AC55 /* CalculatorTableViewController.swift */,
+				043F11C1273425BE00647961 /* DateSelectionTableviewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				0426CC2127299BBE00143E0B /* String+Extensions.swift in Sources */,
 				04704F61272576F800A4AC55 /* CalculatorTableViewController.swift in Sources */,
 				04C8955926CD43C100D6452F /* APIService.swift in Sources */,
+				043F11C2273425BE00647961 /* DateSelectionTableviewController.swift in Sources */,
 				04C8955526C9415500D6452F /* SearchTableViewCell.swift in Sources */,
 				044D7CC1271C6E7B007933DD /* TimeSeriesMonthlyAdjusted.swift in Sources */,
 				04C8954026C8753200D6452F /* AppDelegate.swift in Sources */,

@@ -408,22 +408,51 @@
             </objects>
             <point key="canvasLocation" x="1382.608695652174" y="-168.08035714285714"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Date Selection Tableview Controller-->
         <scene sceneID="JR5-ph-dMT">
             <objects>
-                <tableViewController id="f3d-xB-lD3" sceneMemberID="viewController">
+                <tableViewController id="f3d-xB-lD3" customClass="DateSelectionTableviewController" customModule="DCA_Financial_Stock_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2eq-Da-5lX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MO0-7u-CRi">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cellId" rowHeight="64" id="MO0-7u-CRi" customClass="DateSelectionTableViewCell" customModule="DCA_Financial_Stock_App" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MO0-7u-CRi" id="g63-UE-iUZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="373.5" height="64"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="pib-Rd-wxJ">
+                                            <rect key="frame" x="16" y="8" width="341.5" height="48"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1Z-gB-b0Y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="341.5" height="29"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yi-9u-xpW">
+                                                    <rect key="frame" x="0.0" y="29" width="341.5" height="19"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pib-Rd-wxJ" firstAttribute="leading" secondItem="g63-UE-iUZ" secondAttribute="leading" constant="16" id="Bfq-MH-tRH"/>
+                                        <constraint firstItem="pib-Rd-wxJ" firstAttribute="top" secondItem="g63-UE-iUZ" secondAttribute="top" constant="8" id="RfI-ua-6oU"/>
+                                        <constraint firstAttribute="trailing" secondItem="pib-Rd-wxJ" secondAttribute="trailing" constant="16" id="Wvd-BC-qOG"/>
+                                        <constraint firstAttribute="bottom" secondItem="pib-Rd-wxJ" secondAttribute="bottom" constant="8" id="vn7-la-45e"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="dateLabel" destination="z1Z-gB-b0Y" id="ht8-Xh-APq"/>
+                                    <outlet property="monthsAgoLabel" destination="6Yi-9u-xpW" id="TKL-cx-BSD"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -435,7 +464,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eEc-I4-AgF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="-183"/>
+            <point key="canvasLocation" x="2135" y="-183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fCM-jP-wHQ">

@@ -109,7 +109,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
         if let searchResults = self.searchResults{
             let searchResult = searchResults.items[indexPath.item]
             let symbol = searchResult.symbol // fetch the symbol at the currrent index path
-            handleSelection(for: symbol, searchResult: searchResult) // The magic happens here
+            handleSelection(for: symbol, searchResult: searchResult) // The MAGIC happens here, at this point, we can get out the "searchResult.symbol" which is unique and identifies the stock selected, once the element selected has been identified, it is passed into the "handleSelection()" method as a variable which can then be sent to the API server to fetch the required payload.
         }
         
         tableView.deselectRow(at: indexPath, animated: true) // deselect and stop highlighting the specific row that user has clicked on
@@ -129,7 +129,7 @@ class SearchTableViewController: UITableViewController, UIAnimatable {
             self?.hideLoadingAnimation()
             let asset = Asset(searchResult: searchResult, timeSeriesMonthlyAdusted: timeSeriesMonthlyAdjusted)
             self?.performSegue(withIdentifier: "showCalculator", sender: asset)
-            print("success: \(timeSeriesMonthlyAdjusted.getMonthInfos())")
+           // print("success: \(timeSeriesMonthlyAdjusted.getMonthInfos())")
         }.store(in: &subscribers)
  
     }
