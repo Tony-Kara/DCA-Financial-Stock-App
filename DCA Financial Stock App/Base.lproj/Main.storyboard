@@ -450,7 +450,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateLabel" destination="z1Z-gB-b0Y" id="ht8-Xh-APq"/>
+                                    <outlet property="monthLabel" destination="z1Z-gB-b0Y" id="ht8-Xh-APq"/>
                                     <outlet property="monthsAgoLabel" destination="6Yi-9u-xpW" id="TKL-cx-BSD"/>
                                 </connections>
                             </tableViewCell>
